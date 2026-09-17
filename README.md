@@ -82,19 +82,7 @@ The website provides a professional online presence for a café and makes import
 - JavaScript
 - GitHub
 - GitHub Pages
-
----
-'''text
-
-## 📁 Project Structure
-
-future_aurelia-cafe-website/
-│
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-
+ 
 ---
 
 ## 🎨 Design Highlights
