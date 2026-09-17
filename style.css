@@ -1,8 +1,3 @@
-/* =================================
-   AURELIA CAFE & BISTRO
-   MAIN STYLESHEET
-================================= */
-
 * {
     margin: 0;
     padding: 0;
@@ -26,9 +21,9 @@ a {
 }
 
 
-/* =================================
+/* =========================
    NAVIGATION
-================================= */
+========================= */
 
 header {
     background: #fffaf4;
@@ -56,7 +51,7 @@ header {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 22px;
+    gap: 20px;
 }
 
 .nav-links a {
@@ -70,9 +65,9 @@ header {
 }
 
 
-/* =================================
+/* =========================
    HERO
-================================= */
+========================= */
 
 .hero {
     min-height: 88vh;
@@ -81,7 +76,6 @@ header {
     justify-content: center;
     text-align: center;
     padding: 80px 25px;
-
     background:
         linear-gradient(
             rgba(55, 30, 18, 0.72),
@@ -92,7 +86,6 @@ header {
             #c89572,
             #6e3926
         );
-
     color: white;
 }
 
@@ -134,9 +127,9 @@ header {
 }
 
 
-/* =================================
+/* =========================
    BUTTONS
-================================= */
+========================= */
 
 .btn {
     display: inline-block;
@@ -166,9 +159,9 @@ header {
 }
 
 
-/* =================================
+/* =========================
    COMMON SECTIONS
-================================= */
+========================= */
 
 .section {
     max-width: 1150px;
@@ -192,9 +185,9 @@ header {
 }
 
 
-/* =================================
-   MENU CARDS
-================================= */
+/* =========================
+   MENU
+========================= */
 
 .cards {
     display: grid;
@@ -213,7 +206,6 @@ header {
 
 .card:hover {
     transform: translateY(-7px);
-    box-shadow: 0 15px 35px rgba(77, 46, 30, 0.15);
 }
 
 .icon {
@@ -233,9 +225,9 @@ header {
 }
 
 
-/* =================================
+/* =========================
    ABOUT
-================================= */
+========================= */
 
 .about-section {
     background: #f2e3d5;
@@ -276,9 +268,9 @@ header {
 }
 
 
-/* =================================
+/* =========================
    GALLERY
-================================= */
+========================= */
 
 .gallery {
     display: grid;
@@ -292,15 +284,18 @@ header {
     overflow: hidden;
     text-align: center;
     box-shadow: 0 8px 25px rgba(77, 46, 30, 0.08);
+    transition: 0.3s;
 }
 
-.gallery-placeholder {
-    height: 190px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 70px;
-    background: #ead3c0;
+.gallery-item:hover {
+    transform: translateY(-6px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    display: block;
+    object-fit: cover;
 }
 
 .gallery-item p {
@@ -309,19 +304,18 @@ header {
 }
 
 
-/* =================================
+/* =========================
    TESTIMONIALS
-================================= */
+========================= */
 
 .testimonials {
-    background: #f8eee7;
     max-width: 100%;
+    background: #f8eee7;
 }
 
 .testimonial-cards {
     max-width: 1100px;
     margin: auto;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
@@ -332,18 +326,12 @@ header {
     padding: 30px;
     border-radius: 16px;
     text-align: center;
-
-    box-shadow:
-        0 8px 25px rgba(77, 46, 30, 0.08);
-
+    box-shadow: 0 8px 25px rgba(77, 46, 30, 0.08);
     transition: 0.3s;
 }
 
 .testimonial-card:hover {
     transform: translateY(-6px);
-
-    box-shadow:
-        0 15px 35px rgba(77, 46, 30, 0.14);
 }
 
 .stars {
@@ -363,13 +351,12 @@ header {
 .testimonial-card h3 {
     color: #8b4a2f;
     font-family: Georgia, serif;
-    font-size: 18px;
 }
 
 
-/* =================================
+/* =========================
    CONTACT
-================================= */
+========================= */
 
 .contact-section {
     background: #3f281e;
@@ -384,7 +371,6 @@ header {
 .contact-container {
     max-width: 900px;
     margin: auto;
-
     display: flex;
     justify-content: space-between;
     gap: 40px;
@@ -423,9 +409,9 @@ header {
 }
 
 
-/* =================================
+/* =========================
    FOOTER
-================================= */
+========================= */
 
 footer {
     text-align: center;
@@ -450,9 +436,9 @@ footer p {
 }
 
 
-/* =================================
+/* =========================
    TABLET
-================================= */
+========================= */
 
 @media (max-width: 850px) {
 
@@ -468,10 +454,6 @@ footer p {
         justify-content: center;
     }
 
-    .nav-links a {
-        font-size: 13px;
-    }
-
     .hero {
         min-height: 80vh;
         padding: 60px 20px;
@@ -479,10 +461,6 @@ footer p {
 
     .hero h1 {
         font-size: 48px;
-    }
-
-    .hero p:not(.subtitle) {
-        font-size: 16px;
     }
 
     .cards {
@@ -510,9 +488,9 @@ footer p {
 }
 
 
-/* =================================
+/* =========================
    MOBILE
-================================= */
+========================= */
 
 @media (max-width: 550px) {
 
@@ -537,8 +515,8 @@ footer p {
         grid-template-columns: 1fr;
     }
 
-    .gallery-placeholder {
-        height: 220px;
+    .gallery-item img {
+        height: 240px;
     }
 
     .testimonial-card {
@@ -555,6 +533,10 @@ footer p {
     }
 
     .nav-links {
-        gap: 10px;
+        gap: 9px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
     }
 }
